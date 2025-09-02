@@ -1,0 +1,93 @@
+.calculate {
+  background: linear-gradient(to right, #f8fbff 0%, #d6e9fb 50%, #ffffff 100%),
+    url("../../images/Hero_Image.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+  padding: 5rem 2rem;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+.calculate-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.calculate-left {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  flex: 1;
+}
+.calculate-title {
+  font-size: 6.4rem;
+  font-weight: 600;
+  color: #253347;
+  letter-spacing: -5%;
+  margin-top: 7.2rem;
+  margin-bottom: 3.2rem;
+}
+.calculate-subtitle {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: #253347;
+  font-style: regular;
+}
+.calculate-right {
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  padding: 3.2rem;
+}
+
+// form
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.radio-box {
+  display: flex;
+  justify-content: space-between;
+}
+.form-title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 2.9rem;
+  letter-spacing: -5%;
+  margin-bottom: 3.2rem;
+}
+
+.input-box {
+  margin-top: 3.2rem;
+  display: flex;
+  gap: 2.4rem;
+}
+.form-subtitle {
+  color: #5e6e85;
+  font-size: 1.4rem;
+  line-height: 150%;
+  font-weight: 400;
+  margin-bottom: 0.8rem;
+}
+.input-box label {
+}
+
+.input-label {
+}
+.input {
+  padding: 2.4rem;
+  border-radius: 12px;
+  border: solid 1px #5e6e85;
+}

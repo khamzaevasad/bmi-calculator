@@ -12,7 +12,54 @@
     <!-- HEADER END -->
 
     <!-- MAIN START -->
-    <main class="main"></main>
+    <main class="main">
+      <!-- calculate section -->
+      <section class="calculate">
+        <div class="calculate-container container">
+          <div class="calculate-left">
+            <img class="logo" src="./images/logo.svg" alt="logo" />
+            <h2 class="calculate-title">Body Mass Index Calculator</h2>
+            <p class="calculate-subtitle">
+              Better understand your weight in relation to your height using our
+              body mass index (BM) calculator. While BMI is not the sole
+              determinant of a healthy weight, it offers a valuable starting
+              point to evaluate your overall health and well-being.
+            </p>
+          </div>
+          <div class="calculate-right">
+            <form class="form">
+              <h3 class="form-title">Enter your details below</h3>
+              <div class="radio-box">
+                <label>
+                  <input type="radio" name="unit" value="metric" checked />
+                  Metric
+                </label>
+                <label>
+                  <input type="radio" name="unit" value="imperial" />
+                  Imperial
+                </label>
+              </div>
+
+              <div class="input-box">
+                <label>
+                  <p class="form-subtitle">Height</p>
+                  <input
+                    class="input"
+                    type="number"
+                    id="height"
+                    name="height"
+                  />
+                </label>
+                <label>
+                  <p class="form-subtitle">Weight</p>
+                  <input class="input" type="number" id="weight" name="weight"
+                /></label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
     <!-- MAIN END -->
 
     <!-- FOOTER START -->

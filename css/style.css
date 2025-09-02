@@ -310,6 +310,38 @@ template {
   display: none;
 }
 
+/* inter-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/inter-v19-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/inter-v19-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/inter-v19-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-900 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/inter-v19-latin-900.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 *,
 *::after,
 *::before {
@@ -344,6 +376,7 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
+  font-family: "Inter";
 }
 
 main {
@@ -352,7 +385,100 @@ main {
 
 .container {
   width: 100%;
-  max-width: 1200px; /* o'zgaruvchan */
+  max-width: 1260px; /* o'zgaruvchan */
   margin-inline: auto;
   padding-inline: 5rem;
+}
+
+.calculate {
+  background: linear-gradient(to right, #f8fbff 0%, #d6e9fb 50%, #ffffff 100%), url("../../images/Hero_Image.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+  padding: 5rem 2rem;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+.calculate-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.calculate-left {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  flex: 1;
+}
+
+.calculate-title {
+  font-size: 6.4rem;
+  font-weight: 600;
+  color: #253347;
+  letter-spacing: -5%;
+  margin-top: 7.2rem;
+  margin-bottom: 3.2rem;
+}
+
+.calculate-subtitle {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: #253347;
+  font-style: regular;
+}
+
+.calculate-right {
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  padding: 3.2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.radio-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 2.9rem;
+  letter-spacing: -5%;
+  margin-bottom: 3.2rem;
+}
+
+.input-box {
+  margin-top: 3.2rem;
+  display: flex;
+  gap: 2.4rem;
+}
+
+.form-subtitle {
+  color: #5e6e85;
+  font-size: 1.4rem;
+  line-height: 150%;
+  font-weight: 400;
+  margin-bottom: 0.8rem;
+}
+
+.input {
+  padding: 2.4rem;
+  border-radius: 12px;
+  border: solid 1px #5e6e85;
 }/*# sourceMappingURL=style.css.map */

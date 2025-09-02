@@ -31,6 +31,7 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
+  font-family: "Inter";
 }
 
 main {
@@ -39,7 +40,7 @@ main {
 
 .container {
   width: 100%;
-  max-width: 1200px; /* o'zgaruvchan */
+  max-width: 1260px; /* o'zgaruvchan */
   margin-inline: auto;
   padding-inline: 5rem;
 }
