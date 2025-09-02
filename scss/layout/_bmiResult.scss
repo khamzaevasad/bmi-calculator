@@ -1,0 +1,37 @@
+.bmi-result-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 0 auto;
+  gap: 4rem;
+}
+.image-box {
+  flex: 1.2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-right: 1.2rem;
+}
+.model-img {
+  width: 543px;
+  height: 533px;
+}
+.bmi-info-box {
+  flex: 0.8;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-height: fit-content;
+  padding: 3.2rem;
+}
+.info-title {
+  font-size: 4rem;
+  font-weight: 600;
+  color: #253347;
+}
+.info-subtitle {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 150%;
+  color: #5e6e85;
+}

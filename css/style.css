@@ -377,6 +377,9 @@ body {
   display: flex;
   flex-direction: column;
   font-family: "Inter";
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 main {
@@ -388,6 +391,10 @@ main {
   max-width: 1260px; /* o'zgaruvchan */
   margin-inline: auto;
   padding-inline: 5rem;
+}
+
+.hidden {
+  display: none !important;
 }
 
 .calculate {
@@ -404,18 +411,19 @@ main {
 
 .calculate-container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  max-width: 1200px;
   margin: 0 auto;
+  gap: 4rem;
 }
 
 .calculate-left {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  flex: 1;
+  flex: 1.2;
+  padding-right: 2rem;
 }
 
 .calculate-title {
@@ -436,49 +444,231 @@ main {
 }
 
 .calculate-right {
-  flex: 1;
+  flex: 0.8;
   background-color: #ffffff;
   border-radius: 16px;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   padding: 3.2rem;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.radio-box {
-  display: flex;
-  justify-content: space-between;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
 }
 
 .form-title {
   font-size: 2.4rem;
   font-weight: 600;
   line-height: 2.9rem;
-  letter-spacing: -5%;
-  margin-bottom: 3.2rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+  color: #1a1a1a;
+}
+
+.radio-box {
+  display: flex;
+  gap: 0;
+  border-radius: 12px;
+  padding: 0.4px;
+  margin-bottom: 2.4rem;
+}
+
+.radio-box label {
+  flex: 1;
+  text-align: start;
+  padding-top: 1.2rem;
+  padding-right: 1.6rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  color: #253347;
+  font-family: inherit;
 }
 
 .input-box {
-  margin-top: 3.2rem;
   display: flex;
-  gap: 2.4rem;
+  gap: 1.6rem;
+  margin-bottom: 2.4rem;
+}
+
+.input-group {
+  flex: 1;
 }
 
 .form-subtitle {
   color: #5e6e85;
   font-size: 1.4rem;
-  line-height: 150%;
+  line-height: 1.5;
   font-weight: 400;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.8px;
+}
+
+.input-container {
+  position: relative;
 }
 
 .input {
-  padding: 2.4rem;
+  width: 100%;
+  padding: 1.6rem 2.4rem;
   border-radius: 12px;
-  border: solid 1px #5e6e85;
+  border: 1px solid #5e6e85;
+  font-size: 1.6rem;
+  font-weight: 600;
+  background-color: white;
+  transition: border-color 0.2s ease;
+}
+
+.input:focus {
+  border-color: rgba(143, 174, 207, 0.2509803922);
+}
+
+.unit-label {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #345ff6;
+  pointer-events: none;
+}
+
+.imperial-form-subtitle {
+  color: white;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-weight: 400;
+  margin-bottom: 0.8px;
+}
+
+.bmi-container {
+  padding: 3.2rem;
+  background-color: #345ff6;
+  display: flex;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  border-top-right-radius: 999px;
+  border-bottom-right-radius: 999px;
+}
+
+.bmi-left {
+  flex: 1;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+}
+
+.bmi-subtitle {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 150%;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.bmi-title {
+  color: #fff;
+  font-weight: 600;
+  font-size: 6.4rem;
+  letter-spacing: -5%;
+}
+
+.bmi-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bmi-info-text {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 150%;
+  color: #fff;
+}
+
+.info-bold {
+  font-weight: 600;
+}
+
+@media (max-width: 992px) {
+  .calculate-container {
+    gap: 3rem;
+  }
+  .calculate-title {
+    font-size: 4.8rem; /* Kichikroq qil */
+  }
+}
+@media (max-width: 768px) {
+  .calculate-container {
+    flex-direction: column;
+    gap: 3rem;
+    text-align: center;
+  }
+  .calculate-right {
+    flex: none;
+    width: 100%;
+    margin-top: 0;
+  }
+  .bmi-container {
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+  .bmi-left {
+    align-items: flex-start;
+  }
+  .bmi-right {
+    text-align: start;
+  }
+  .unit-label {
+    font-size: 1.4rem;
+  }
+  .calculate-left {
+    text-align: center;
+  }
+}
+.bmi-result-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 0 auto;
+  gap: 4rem;
+}
+
+.image-box {
+  flex: 1.2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-right: 1.2rem;
+}
+
+.model-img {
+  width: 543px;
+  height: 533px;
+}
+
+.bmi-info-box {
+  flex: 0.8;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  padding: 3.2rem;
+}
+
+.info-title {
+  font-size: 4rem;
+  font-weight: 600;
+  color: #253347;
+}
+
+.info-subtitle {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 150%;
+  color: #5e6e85;
 }/*# sourceMappingURL=style.css.map */

@@ -26,39 +26,157 @@
               point to evaluate your overall health and well-being.
             </p>
           </div>
+
           <div class="calculate-right">
             <form class="form">
               <h3 class="form-title">Enter your details below</h3>
+
               <div class="radio-box">
                 <label>
                   <input type="radio" name="unit" value="metric" checked />
-                  Metric
+                  <span>Metric</span>
                 </label>
                 <label>
                   <input type="radio" name="unit" value="imperial" />
-                  Imperial
+                  <span>Imperial</span>
                 </label>
               </div>
-
+              <!-- Metric input -->
               <div class="input-box">
-                <label>
+                <div class="input-group">
                   <p class="form-subtitle">Height</p>
-                  <input
-                    class="input"
-                    type="number"
-                    id="height"
-                    name="height"
-                  />
-                </label>
-                <label>
+                  <div class="input-container">
+                    <input
+                      class="input"
+                      type="number"
+                      id="height"
+                      name="height"
+                      placeholder="0"
+                    />
+                    <span class="unit-label" id="height-unit">cm</span>
+                  </div>
+                </div>
+
+                <div class="input-group">
                   <p class="form-subtitle">Weight</p>
-                  <input class="input" type="number" id="weight" name="weight"
-                /></label>
+                  <div class="input-container">
+                    <input
+                      class="input"
+                      type="number"
+                      id="weight"
+                      name="weight"
+                      placeholder="0"
+                    />
+                    <span class="unit-label" id="weight-unit">kg</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Imperial input -->
+              <div class="imperial hidden">
+                <div class="input-box">
+                  <div class="input-group">
+                    <p class="form-subtitle">Height</p>
+                    <div class="input-container">
+                      <input
+                        class="input"
+                        type="number"
+                        id="height"
+                        name="height"
+                        placeholder="0"
+                      />
+                      <span class="unit-label" id="height-unit">ft</span>
+                    </div>
+                  </div>
+
+                  <div class="input-group">
+                    <p class="imperial-form-subtitle">.</p>
+                    <div class="input-container">
+                      <input
+                        class="input"
+                        type="number"
+                        id="weight"
+                        name="weight"
+                        placeholder="0"
+                      />
+                      <span class="unit-label" id="weight-unit">in</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="input-box">
+                  <div class="input-group">
+                    <p class="form-subtitle">Height</p>
+                    <div class="input-container">
+                      <input
+                        class="input"
+                        type="number"
+                        id="height"
+                        name="height"
+                        placeholder="0"
+                      />
+                      <span class="unit-label" id="height-unit">st</span>
+                    </div>
+                  </div>
+
+                  <div class="input-group">
+                    <p class="imperial-form-subtitle">.</p>
+                    <div class="input-container">
+                      <input
+                        class="input"
+                        type="number"
+                        id="weight"
+                        name="weight"
+                        placeholder="0"
+                      />
+                      <span class="unit-label" id="weight-unit">lbs</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- BMI info -->
+
+              <div class="bmi-container">
+                <div class="bmi-left">
+                  <p class="bmi-subtitle">Your BMI is...</p>
+                  <h3 class="bmi-title">22.0</h3>
+                </div>
+                <div class="bmi-right">
+                  <p class="bmi-info-text">
+                    Your BMI suggests you're a healthy weight. Your ideal weight
+                    is between
+                    <span class="info-bold"> 9st 6lbs - 12st 10lbs.</span>
+                  </p>
+                </div>
               </div>
             </form>
           </div>
         </div>
       </section>
+
+      <!-- BMI result -->
+
+      <div class="bmi-result-container container">
+        <div class="image-box">
+          <img
+            class="model-img"
+            src="./images/image-man-eating.webp"
+            alt="model-img"
+          />
+        </div>
+        <div class="bmi-info-box">
+          <h3 class="info-title">What your BMI result means</h3>
+          <p class="info-subtitle">
+            A BMI range of 18.5 to 24.9 is considered a 'healthy weight.'
+            Maintaining a healthy weight may lower your chances of experiencing
+            health issues later on, such as obesity and type 2 diabetes. Aim for
+            a nutritious diet with reduced fat and sugar content, incorporating
+            ample fruits and vegetables. Additionally, strive for regular
+            physical activity, ideally about 30 minutes daily for five days a
+            week.
+          </p>
+        </div>
+      </div>
     </main>
     <!-- MAIN END -->
 
