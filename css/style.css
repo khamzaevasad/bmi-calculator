@@ -393,6 +393,51 @@ main {
   padding-inline: 5rem;
 }
 
+.cards-container {
+  margin-top: 9.2rem;
+  margin-bottom: 9.2rem;
+  background-image: url("../../images/TipsBackground.png");
+  border-bottom-right-radius: 35px;
+  padding: 9.2rem;
+  background-repeat: no-repeat;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  margin-bottom: 4rem;
+  margin-left: 3.2rem;
+}
+
+.card-title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #253347;
+  line-height: 2.9rem;
+  margin-top: 4.8rem;
+  margin-bottom: 2.4rem;
+}
+
+.card-subtitle {
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #5e6e85;
+  line-height: 150%;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+  }
+  .card {
+    min-width: 320px;
+    min-height: 221px;
+  }
+}
 .hidden {
   display: none !important;
 }
@@ -631,23 +676,26 @@ main {
 }
 .bmi-result-container {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   margin: 0 auto;
   gap: 4rem;
+  min-height: 533px;
 }
 
 .image-box {
   flex: 1.2;
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   padding-right: 1.2rem;
 }
 
 .model-img {
   width: 543px;
   height: 533px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .bmi-info-box {
@@ -655,6 +703,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  justify-content: center;
   min-height: -moz-fit-content;
   min-height: fit-content;
   padding: 3.2rem;
@@ -664,6 +713,8 @@ main {
   font-size: 4rem;
   font-weight: 600;
   color: #253347;
+  margin-bottom: 2rem;
+  line-height: 1.2;
 }
 
 .info-subtitle {
@@ -671,4 +722,19 @@ main {
   font-weight: 400;
   line-height: 150%;
   color: #5e6e85;
+}
+
+@media (max-width: 768px) {
+  .bmi-result-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .info-title {
+    font-size: 3rem;
+  }
+  .model-img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+  }
 }/*# sourceMappingURL=style.css.map */

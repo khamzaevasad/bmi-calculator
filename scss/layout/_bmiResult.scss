@@ -1,26 +1,29 @@
 .bmi-result-container {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   margin: 0 auto;
   gap: 4rem;
+  min-height: 533px;
 }
 .image-box {
   flex: 1.2;
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   padding-right: 1.2rem;
 }
 .model-img {
   width: 543px;
   height: 533px;
+  object-fit: cover;
 }
 .bmi-info-box {
   flex: 0.8;
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  justify-content: center;
   min-height: fit-content;
   padding: 3.2rem;
 }
@@ -28,10 +31,29 @@
   font-size: 4rem;
   font-weight: 600;
   color: #253347;
+  margin-bottom: 2rem;
+  line-height: 1.2;
 }
 .info-subtitle {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 150%;
   color: #5e6e85;
+}
+
+@media (max-width: 768px) {
+  .bmi-result-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .info-title {
+    font-size: 3rem;
+  }
+
+  .model-img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+  }
 }
