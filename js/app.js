@@ -22,8 +22,6 @@ unitRadios.forEach((radio) => {
   });
 });
 
-// const weightInput = document.getElementById("weightInput");
-
 heightInput.addEventListener("input", () => {
   const h = calcHeight(heightInput.value);
   const w = calcWeight(weightInput.value);
@@ -37,7 +35,8 @@ weightInput.addEventListener("input", () => {
 });
 
 function calcHeight(heightVal) {
-  return parseFloat(heightVal) / 100;
+  const val = parseFloat(heightVal);
+  return val > 10 ? val / 100 : val;
 }
 
 function calcWeight(weightval) {
