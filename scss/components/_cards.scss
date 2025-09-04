@@ -31,6 +31,111 @@
   line-height: 150%;
 }
 
+// limitation-card
+.bmi {
+  margin-bottom: 11.5rem;
+  margin-top: 11.5rem;
+}
+.limitations-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 13.2rem;
+}
+.limitations-left {
+  flex: 2;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  max-width: 564px;
+}
+.limitation-title {
+  color: #253347;
+  font-size: 4.8rem;
+  font-weight: 600;
+}
+.limitation-subtitle {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 150%;
+  color: #5e6e85;
+  margin-top: 3.2rem;
+}
+.limitations-right {
+  flex: 1;
+}
+.limitation-card {
+  display: flex;
+  flex-direction: column;
+  margin: 3.2rem;
+  padding: 3.2rem;
+  max-width: 365px;
+  min-height: 232px;
+  border-radius: 16px;
+  box-shadow: -2px 17px 36px -10px rgba(172, 193, 222, 1);
+  -webkit-box-shadow: -2px 17px 36px -10px rgba(172, 193, 222, 1);
+  -moz-box-shadow: -2px 17px 36px -10px rgba(172, 193, 222, 1);
+}
+.card-header {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 150%;
+  gap: 1.6rem;
+}
+.card-body {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 150%;
+  color: #5e6e85;
+  margin-top: 1.6rem;
+}
+
+.card-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card-center {
+  display: flex;
+  justify-content: center;
+}
+
+.gender {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .limitations-container {
+    flex-direction: column;
+    gap: 6.4rem;
+    text-align: center;
+  }
+
+  .limitations-left {
+    max-width: 100%;
+    align-items: center;
+  }
+
+  .limitations-right {
+    display: none;
+  }
+
+  .card-end,
+  .card-center {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.4rem;
+  }
+
+  .limitation-card {
+    margin-bottom: 1rem;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
   .cards {
     flex-direction: column;
@@ -38,5 +143,37 @@
   .card {
     min-width: 320px;
     min-height: 221px;
+  }
+
+  .limitations-right {
+    display: none;
+  }
+
+  .limitations-container {
+    gap: 4rem;
+    padding: 0 2rem;
+  }
+
+  .limitation-title {
+    font-size: 3.2rem;
+  }
+
+  .limitation-subtitle {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+  }
+
+  .card-header {
+    font-size: 1.8rem;
+  }
+
+  .card-body {
+    font-size: 1.4rem;
+  }
+
+  .limitation-card {
+    padding: 2.4rem;
+    min-height: auto;
+    margin-bottom: 1rem;
   }
 }
