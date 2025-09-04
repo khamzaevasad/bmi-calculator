@@ -53,7 +53,7 @@ sass/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/bmi-calculator.git
+   git clone [https://github.com/your-username/bmi-calculator.git](https://github.com/khamzaevasad/bmi-calculator?tab=readme-ov-file)
    ```
 
 cd bmi-calculator
