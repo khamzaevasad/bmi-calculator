@@ -36,7 +36,7 @@ This app allows users to easily calculate their Body Mass Index and provides use
 
 SASS follows the **7-1 architecture** pattern:
 
-sass/
+  ```sass/
 │
 ├── abstracts/ # Variables, functions, mixins
 ├── base/ # Reset, typography, global styles
@@ -53,8 +53,9 @@ sass/
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/your-username/bmi-calculator.git](https://github.com/khamzaevasad/bmi-calculator?tab=readme-ov-file)
-   ```
+   git clone https://github.com/khamzaevasad/bmi-calculator.git
+
+
 
 cd bmi-calculator
 
