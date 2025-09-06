@@ -3,13 +3,12 @@
 }
 
 .calculate {
-  background: linear-gradient(to right, #f8fbff 0%, #d6e9fb 50%, #ffffff 100%),
-    url("../../images/Hero_Image.png");
-  background-repeat: no-repeat;
-  background-position: left;
-  background-size: cover;
-  border-bottom-left-radius: 35px;
-  border-bottom-right-radius: 35px;
+  // url("../../images/Hero_Image.png");
+  // background-repeat: no-repeat;
+  // background-position: left;
+  // background-size: cover;
+  // border-bottom-left-radius: 35px;
+  // border-bottom-right-radius: 35px;
   padding: 5rem 2rem;
   min-height: 600px;
   overflow: hidden;
@@ -53,6 +52,9 @@
   align-items: stretch;
   padding: 3.2rem;
   min-height: fit-content;
+  box-shadow: -2px 17px 36px -10px rgba(172, 193, 222, 1);
+  -webkit-box-shadow: -2px 17px 36px -10px rgba(172, 193, 222, 1);
+  -moz-box-shadow: -2px 17px 36px -10px rgba(172, 193, 222, 1);
 }
 
 // form
@@ -148,11 +150,31 @@
   border-top-right-radius: 999px;
   border-bottom-right-radius: 999px;
 }
+
+.bmi-content {
+}
+.content-title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: white;
+  line-height: 2.4rem;
+  margin-bottom: 1.6rem;
+}
+.content-subtitle {
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: white;
+  line-height: 150%;
+}
+
 .bmi-left {
   flex: 1;
   display: flex;
   align-items: start;
   flex-direction: column;
+  width: 206px;
+  overflow: hidden;
+  overflow-x: auto;
 }
 .bmi-subtitle {
   color: #fff;

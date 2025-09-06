@@ -81,7 +81,7 @@
                       <input
                         class="input"
                         type="number"
-                        id="height"
+                        id="heightImperial"
                         name="height"
                         placeholder="0"
                       />
@@ -95,7 +95,7 @@
                       <input
                         class="input"
                         type="number"
-                        id="weight"
+                        id="inputIn"
                         name="weight"
                         placeholder="0"
                       />
@@ -106,12 +106,12 @@
 
                 <div class="input-box">
                   <div class="input-group">
-                    <p class="form-subtitle">Height</p>
+                    <p class="form-subtitle">Weight</p>
                     <div class="input-container">
                       <input
                         class="input"
                         type="number"
-                        id="height"
+                        id="weightImperial"
                         name="height"
                         placeholder="0"
                       />
@@ -125,7 +125,7 @@
                       <input
                         class="input"
                         type="number"
-                        id="weight"
+                        id="inputLbs"
                         name="weight"
                         placeholder="0"
                       />
@@ -138,16 +138,26 @@
               <!-- BMI info -->
 
               <div class="bmi-container">
-                <div class="bmi-left">
-                  <p class="bmi-subtitle">Your BMI is...</p>
-                  <h3 id="bmiNumber" class="bmi-title">22.0</h3>
-                </div>
-                <div class="bmi-right">
-                  <p class="bmi-info-text" id="infoBmi">
-                    Your BMI suggests you're a healthy weight. Your ideal weight
-                    is between
-                    <span class="info-bold"> 9st 6lbs - 12st 10lbs.</span>
+                <div class="bmi-content">
+                  <h3 class="content-title">Welcome!</h3>
+                  <p class="content-subtitle">
+                    Enter your height and weight and you’ll see your BMI result
+                    here
                   </p>
+                </div>
+
+                <div class="bmi-container result hidden">
+                  <div class="bmi-left">
+                    <p class="bmi-subtitle">Your BMI is...</p>
+                    <h3 id="bmiNumber" class="bmi-title">22.0</h3>
+                  </div>
+                  <div class="bmi-right">
+                    <p class="bmi-info-text" id="infoBmi">
+                      Your BMI suggests you're a healthy weight. Your ideal
+                      weight is between
+                      <span class="info-bold"> 9st 6lbs - 12st 10lbs.</span>
+                    </p>
+                  </div>
                 </div>
               </div>
             </form>

@@ -1,10 +1,16 @@
 const unitRadios = document.querySelectorAll('input[name="unit"]');
 const metricBox = document.querySelector(".input-box");
+const bmiContent = document.querySelector(".bmi-content");
+const resultBox = document.querySelector(".result");
 const imperialBox = document.querySelector(".imperial");
 const heightInput = document.getElementById("heightInput");
 const weightInput = document.getElementById("weightInput");
 const infoBmi = document.getElementById("infoBmi");
 const bmiNumber = document.getElementById("bmiNumber");
+const inputHeightImperial = document.getElementById("heightImperial");
+const inputIn = document.getElementById("inputIn");
+const inputWeightImperial = document.getElementById("weightImperial");
+const inputLbs = document.getElementById("inputLbs");
 
 // toggler function
 function toggler() {
@@ -25,13 +31,17 @@ unitRadios.forEach((radio) => {
 heightInput.addEventListener("input", () => {
   const h = calcHeight(heightInput.value);
   const w = calcWeight(weightInput.value);
-  calcBmi(h, w);
+  if (h && w) {
+    calcBmi(h, w);
+  }
 });
 
 weightInput.addEventListener("input", () => {
   const h = calcHeight(heightInput.value);
   const w = calcWeight(weightInput.value);
-  calcBmi(h, w);
+  if (h && w) {
+    calcBmi(h, w);
+  }
 });
 
 function calcHeight(heightVal) {
@@ -46,6 +56,11 @@ function calcWeight(weightval) {
 function calcBmi(calcHeight, calcWeight) {
   const calc = calcWeight / (calcHeight * calcHeight);
   const result = parseFloat(calc.toFixed(2));
+
+  if (calcHeight && calcWeight) {
+    bmiContent.classList.add("hidden");
+    resultBox.classList.remove("hidden");
+  }
 
   if (result < 18.5) {
     infoBmi.textContent =
@@ -62,7 +77,10 @@ function calcBmi(calcHeight, calcWeight) {
   } else {
     infoBmi.textContent =
       "Your BMI suggests obesity. It's important to consult a healthcare professional for guidance";
-    bmiNumber.textContent = 22.0;
+    bmiNumber.textContent = result; //isNaN(result) ? "Please type weight" : result;
+
+    // bmiContent.classList.remove("hidden");
+    // resultBox.classList.add("hidden");
   }
 }
 

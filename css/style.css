@@ -380,6 +380,7 @@ body {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  background: linear-gradient(to right, #f8fbff 0%, #d6e9fb 50%, #ffffff 100%);
 }
 
 main {
@@ -468,6 +469,7 @@ main {
 }
 
 .limitation-card {
+  background: #ffffff;
   display: flex;
   flex-direction: column;
   margin: 3.2rem;
@@ -570,17 +572,23 @@ main {
     margin-bottom: 1rem;
   }
 }
+/* For Chrome, Safari, Edge, and Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; /* Ensures no extra space is left behind */
+}
+
+/* For Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .hidden {
   display: none !important;
 }
 
 .calculate {
-  background: linear-gradient(to right, #f8fbff 0%, #d6e9fb 50%, #ffffff 100%), url("../../images/Hero_Image.png");
-  background-repeat: no-repeat;
-  background-position: left;
-  background-size: cover;
-  border-bottom-left-radius: 35px;
-  border-bottom-right-radius: 35px;
   padding: 5rem 2rem;
   min-height: 600px;
   overflow: hidden;
@@ -629,6 +637,9 @@ main {
   padding: 3.2rem;
   min-height: -moz-fit-content;
   min-height: fit-content;
+  box-shadow: -2px 17px 36px -10px rgb(172, 193, 222);
+  -webkit-box-shadow: -2px 17px 36px -10px rgb(172, 193, 222);
+  -moz-box-shadow: -2px 17px 36px -10px rgb(172, 193, 222);
 }
 
 .form-title {
@@ -728,11 +739,29 @@ main {
   border-bottom-right-radius: 999px;
 }
 
+.content-title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: white;
+  line-height: 2.4rem;
+  margin-bottom: 1.6rem;
+}
+
+.content-subtitle {
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: white;
+  line-height: 150%;
+}
+
 .bmi-left {
   flex: 1;
   display: flex;
   align-items: start;
   flex-direction: column;
+  width: 206px;
+  overflow: hidden;
+  overflow-x: auto;
 }
 
 .bmi-subtitle {
