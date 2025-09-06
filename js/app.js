@@ -7,26 +7,28 @@ const heightInput = document.getElementById("heightInput");
 const weightInput = document.getElementById("weightInput");
 const infoBmi = document.getElementById("infoBmi");
 const bmiNumber = document.getElementById("bmiNumber");
-const inputHeightImperial = document.getElementById("heightImperial");
-const inputIn = document.getElementById("inputIn");
-const inputWeightImperial = document.getElementById("weightImperial");
-const inputLbs = document.getElementById("inputLbs");
+
+// imperial inputs
+// const inputHeightImperial = document.getElementById("heightImperial");
+// const inputIn = document.getElementById("inputIn");
+// const inputWeightImperial = document.getElementById("weightImperial");
+// const inputLbs = document.getElementById("inputLbs");
 
 // toggler function
-function toggler() {
-  metricBox.classList.toggle("hidden");
-  imperialBox.classList.toggle("hidden");
-}
+// function toggler() {
+//   metricBox.classList.toggle("hidden");
+//   imperialBox.classList.toggle("hidden");
+// }
 
-unitRadios.forEach((radio) => {
-  radio.addEventListener("change", () => {
-    if (radio.value === "imperial") {
-      toggler();
-    } else {
-      toggler();
-    }
-  });
-});
+// unitRadios.forEach((radio) => {
+//   radio.addEventListener("change", () => {
+//     if (radio.value === "imperial") {
+//       toggler();
+//     } else {
+//       toggler();
+//     }
+//   });
+// });
 
 heightInput.addEventListener("input", () => {
   const h = calcHeight(heightInput.value);
@@ -83,6 +85,29 @@ function calcBmi(calcHeight, calcWeight) {
     // resultBox.classList.add("hidden");
   }
 }
+
+// imperial Calc
+
+// imperial events
+
+// inputHeightImperial.addEventListener("input", () => {
+//   const feet = parseFloat(inputHeightImperial.value) || 0;
+// });
+
+// inputIn.addEventListener("input", () => {
+//   const heightInch = inputIn.value;
+//   console.log(heightInch);
+// });
+
+// inputWeightImperial.addEventListener("input", () => {
+//   const weightIm = inputWeightImperial.value;
+//   console.log(weightIm);
+// });
+
+// inputLbs.addEventListener("input", () => {
+//   weightLbs = inputLbs.value;
+//   console.log(weightLbs);
+// });
 
 // Your BMI suggests you're underweight. You may need to gain some weight for optimal health.
 // our BMI suggests you're a healthy weight. Keep maintaining your current lifestyle!
